@@ -22,7 +22,7 @@
 2. To create a note send POST request on url: localhost:3000/notes with 'title' and 'content' as the required fields.
 3. To modify a note send PUT request on url: localhost:3000/notes/<note-id> with 'title' and 'content' as the required fields.
 4. To delete a note send DELETE request on url: localhost:3000/notes/<note-id>
-5. To print a HTML file for all the notes send GET request on url: localhost:3000/notes and the output will be output.pdf file.
-6. To register a user send POST request on url: localhost:3000/user/signup with username, email and password as the required fields
-7. To login a user send POST request on url: localhost:3000/user/login with email and password as the required fields 
+5. To print a HTML file for all the notes send GET request on url: localhost:3000/notes and the output will be 'output.pdf' file.
+6. To register a user send POST request on url: localhost:3000/user/signup with 'username', 'email' and 'password' as the required fields
+7. To login a user send POST request on url: localhost:3000/user/login with 'email' and 'password' as the required fields 
 
