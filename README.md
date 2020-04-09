@@ -1,6 +1,6 @@
 # Notes_Application
 
-##Dependencies to install:
+## Dependencies to install:
 1. bcryptjs : version 2.4.3
 2. body-parser : version 1.19.0
 3. core-js : version 3.6.
