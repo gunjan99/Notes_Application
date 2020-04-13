@@ -11,6 +11,7 @@ This is a simple note taking application based on node.js. This application incl
 ## Dependencies to install:
 You can install all the required dependencies of node.js using the following command: -
 > npm install
+
 ## How to Run(on Postman):
 
 1. Home page is on the url: localhost:3000/
@@ -20,4 +21,12 @@ You can install all the required dependencies of node.js using the following com
 5. To print a HTML file for all the notes send GET request on url: localhost:3000/notes and the output will be 'output.pdf' file.
 6. To register a user send POST request on url: localhost:3000/user/signup with 'username', 'email' and 'password' as the required fields
 7. To login a user send POST request on url: localhost:3000/user/login with 'email' and 'password' as the required fields 
+  
+## API Description:
+1. `/notes`
+  - Method: `POST`
+  - Description: You can create a new note using this.
+  - Params: You have to add the following parameters to create a new note
+    - `title` : If you do not add this then new note with title 'Untitled note' will be created.
+    - `content` : This is required parameter. If you do not add this error will arise and new note will not be created.
 
