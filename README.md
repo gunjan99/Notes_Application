@@ -1,21 +1,16 @@
 # Notes_Application
-
+## Description:
+This is a simple note taking application based on node.js. This application includes APIs to provide you with the following functionalities: -
+1. Creating User.
+2. Logging in user.
+3. Creating a note and saving it in the database.
+4. Viewing all the saved notes.
+5. Updating a note using the note id.
+6. Deleting a note using the note id.
+7. Printing all the notes to a pdf file in which all the notes are sorted by date and time.
 ## Dependencies to install:
-1. bcryptjs : version 2.4.3
-2. body-parser : version 1.19.0
-3. core-js : version 3.6.
-4. express : version 4.17.1
-5. express-messages : version 1.0.1
-6. express-validator : version 5.3.1
-7. fs : version 0.0.1-security
-8. jsonwebtoken : version 8.5.1
-9. mongoose : version 5.9.7
-10. path : version 0.12.7
-11. pdf-creator-node : version 1.4.1
-12. pdfkit : version 0.11.0
-13. pug : version 2.0.4
-14. save : version 2.4.0
-
+You can install all the required dependencies of node.js using the following command: -
+> npm install
 ## How to Run(on Postman):
 
 1. Home page is on the url: localhost:3000/
