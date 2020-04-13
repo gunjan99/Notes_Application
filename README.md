@@ -11,22 +11,50 @@ This is a simple note taking application based on node.js. This application incl
 ## Dependencies to install:
 You can install all the required dependencies of node.js using the following command: -
 > npm install
-
-## How to Run(on Postman):
-
-1. Home page is on the url: localhost:3000/
-2. To create a note send POST request on url: localhost:3000/notes with 'title' and 'content' as the required fields.
-3. To modify a note send PUT request on url: localhost:3000/notes/<note-id> with 'title' and 'content' as the required fields.
-4. To delete a note send DELETE request on url: localhost:3000/notes/<note-id>
-5. To print a HTML file for all the notes send GET request on url: localhost:3000/notes and the output will be 'output.pdf' file.
-6. To register a user send POST request on url: localhost:3000/user/signup with 'username', 'email' and 'password' as the required fields
-7. To login a user send POST request on url: localhost:3000/user/login with 'email' and 'password' as the required fields 
   
 ## API Description:
+
 1. `/notes`
   - Method: `POST`
   - Description: You can create a new note using this.
   - Params: You have to add the following parameters to create a new note
     - `title` : If you do not add this then new note with title 'Untitled note' will be created.
     - `content` : This is required parameter. If you do not add this error will arise and new note will not be created.
+  - Result: New note will be added to the database.
+  
+2. `/notes/<note-id>`
+  - Method: `PUT`
+  - Description: You can update the note with id equal to `note-id` using this.
+  - Params: You have to add the following parameters to create a new note
+    - `title` : You can update the title for the note using this parameter.
+    - `content` : You can update the content of the note using this parameter.
+  - Result: The note with id equal to `note-id` will be updated in the database.
+  
+3. `/notes/<note-id>`
+  - Method: `DELETE`
+  - Description: You can delete the note with id equal to `note-id` using this.
+  - Params: None
+  - Result: The note with id equal to `note-id` will be deleted from the database.
 
+4. `/notes`
+  - Method: `GET`
+  - Description: You can get the JSON object and PDF file containing all the notes using this.
+  - Params: None
+  - Result: JSON object containing all the notes along with `output.pdf` file containg all the notes will be saved in the local folder.
+  
+5. `/user/signup`
+  - Method: `POST`
+  - Description: You can create a new user using this.
+  - Params: You have to add the following parameters to create a new user. All the parameters are required and if not provided error will arise while creating a new user.
+    - `username` : Specify username for the new user.
+    - `email` : Specify a valid email id. For example :- `*****@****.com`
+    - `password` : Specify a password for the new user to login.
+  - Result: New user will be added to the database.
+
+6. `/user/login`
+  - Method: `POST`
+  - Description: You can login into your account using this.
+  - Params: You have to add the following parameters to create a new note. All the parameters are required and if not provided error will arise while logging in.
+    - `email` : Specify the email id of your account.
+    - `password` : Specify the password for the user to login.
+  - Result: If the credentials are correct user will be logged into their account.
